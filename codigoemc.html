@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Código Invisível</title>
+    <style>
+        #code {
+            display: none; /* Oculta o código */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teste de Código Invisível</h1>
+    </header>
+    <section id="code">
+        <pre>
+            <code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char lanche;
+    char almoco;
+    char opcaolanche[100];
+    char opcaoalmoco[100];
+
+    // Menu para o lanche
+    printf("Digite uma opção para o lanche:\\n");
+    printf("1. Arroz, feijão e ovo cozido\\n");
+    printf("2. Arroz e molho\\n");
+    printf("3. Arroz e frango\\n");
+    printf("4. Cachorro-quente\\n");
+    printf("5. Arroz e lentilha\\n");
+    printf("6. Outra opção\\n");
+    printf("Escolha: ");
+    scanf(" %c", &lanche);
+
+    // Menu para o almoço
+    printf("Digite uma opção para o almoço:\\n");
+    printf("1. Arroz, mandioca (batatinha ou massa), salada e bolinho de carne\\n");
+    printf("2. Arroz, mandioca (batatinha ou massa), salada e strogonoff\\n");
+    printf("3. Arroz, mandioca (batatinha ou massa), salada e carne\\n");
+    printf("4. Arroz, mandioca (batatinha ou massa), salada e carne de porco\\n");
+    printf("5. Arroz, mandioca (batatinha ou massa), salada e carne de frango\\n");
+    printf("6. Arroz, mandioca (batatinha ou massa), salada e carne moída\\n");
+    printf("7. Outra opção\\n");
+    printf("Escolha: ");
+    scanf(" %c", &almoco);
+
+    // Processa a escolha do lanche
+    switch(lanche) {
+        case '1':
+            printf("Você escolheu arroz, feijão e ovo cozido\\n");
+            break;
+        case '2':
+            printf("Você escolheu arroz e molho\\n");
+            break;
+        case '3':
+            printf("Você escolheu arroz e frango\\n");
+            break;
+        case '4':
+            printf("Você escolheu cachorro-quente\\n");
+            break;
+        case '5':
+            printf("Você escolheu arroz e lentilha\\n");
+            break;
+        case '6':
+            printf("Qual será o lanche: ");
+            scanf(" %[^\n]", opcaolanche);
+            printf("Então o lanche de hoje será: %s\\n", opcaolanche);
+            break;
+        default:
+            printf("Opção inválida para o lanche!\\n");
+            break;
+    }
+
+    // Processa a escolha do almoço
+    switch(almoco) {
+        case '1':
+            printf("Você escolheu arroz, mandioca, salada e bolinho de carne\\n");
+            break;
+        case '2':
+            printf("Você escolheu arroz,
